@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+/* overlay */
+.overlay{
+    position: absolute;
+    z-index:-3;
+    left:-3em;
+    width:400vw;
+    height:170vh;
+    background-color:#ebebeb;
+    transform: rotate(11.37deg);
+}
+.nav{
+    z-index: -1;
+    position: relative;
+    display: flex;
+    height:9em;
+    justify-content: space-between;
+    background-color:#ebebeb;
+}
+
+.pt-1{
+    height:6em;
+    overflow: hidden;
+
+}
+.pt-2{
+    overflow: hidden;
+    height:6em;
+    border-left:.005em solid #222 ;
+}
+
+
+
+ul{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* .pt-2 #tst{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+li{
+    position: relative;
+    list-style: none;
+    padding:1.5em;
+    margin:1em;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.img{
+    position: relative;
+    scale:.6;
+    right:2em;
+    height: 8em;    
+    top:-.5em;
+    mix-blend-mode: multiply;
+}
+
+/* seperator */
+.seperator{
+    position: relative;
+    background: #000;
+    top:-3em;
+    left:25%;
+    height: 0.004em;    
+    width:100%;
+}
+
+.pg-1{
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+
+.pg-1>img{
+    position: relative;
+    width:44%;
+    height:44%;
+    mix-blend-mode:multiply;
+    left:50%;
+    
+}
+
+.txt1box{
+    overflow-y: hidden;
+    position: relative;
+    width:60%;
+    height:8em;
+    top:13%;
+    font-size: 18px;
+    left:10%;
+}
+
+.card{
+    width:15em;
+    height:20em;
+    top:-6em;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    margin-bottom:4em;
+    left:70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.pg-2{
+    position: relative;
+    overflow: hidden;
+    background-color: red;
+    width:100%;
+    height:100vh;
+}
+
+h2{
+    position: relative;
+
+    left:4em;
+}
+
+/* transitions between pages containing navbar and the second*/
+
+
+.txt-box-under-des{
+    position: relative; 
+    font-size:44px;
+    position: relative;
+    width:8em;
+    height:2.3em;
+    top:-10em;
+    left:8%;
+    z-index: 1;
+}
+
+.sep-prt2{
+    position: relative;
+    width:9.5%;
+    height:.05em;
+    top:-27.5em;
+    left:8%;
+    background-color: #222;
+}
+
+::-webkit-scrollbar{
+    width:0;
+}
+.imp{
+    cursor:pointer;
+    color:rgba(0,0,255,0.6);
+}
+.imp:hover{
+    --webkit-transform:scale(2);
+}
