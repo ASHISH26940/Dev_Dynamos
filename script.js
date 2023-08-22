@@ -21,5 +21,10 @@ tl.from(".imp ",{
     x:-100,
     duration:1,
     opacity:0,
-    delay:1
+    delay:1,
+    markers:true,
+    scrollTrigger:".imp"
 })
+
+let boxes=document.querySelectorAll(".boxes");
+

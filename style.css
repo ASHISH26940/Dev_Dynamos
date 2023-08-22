@@ -1,9 +1,15 @@
+@font-face {
+    font-family: test;
+    src: url(./img/JosefinSans-Thin.ttf);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     overflow-x: hidden;
-
+    font-family: test;
+    
 }
 /* overlay */
 .overlay{
@@ -12,7 +18,7 @@
     left:-3em;
     width:400vw;
     height:170vh;
-    background-color:#ebebeb;
+    /* background-color:rgb(235, 235, 235,.6); */
     transform: rotate(11.37deg);
 }
 .nav{
@@ -21,7 +27,8 @@
     display: flex;
     height:9em;
     justify-content: space-between;
-    background-color:#ebebeb;
+    /* background-color:rgb(235, 235, 235,.6); */
+    font-weight: bold;
 }
 
 .pt-1{
@@ -69,6 +76,15 @@ a{
     mix-blend-mode: multiply;
 }
 
+.img-1{
+    /* object-fit: cover; */
+    background-repeat:none ;
+    height:8em;
+    position:relative;
+    width:10em;
+    z-index: 1;
+}
+
 /* seperator */
 .seperator{
     position: relative;
@@ -82,7 +98,7 @@ a{
 .pg-1{
     position:relative;
     width:100%;
-    height:100vh;
+    height:85vh;
 }
 
 .pg-1>img{
@@ -119,7 +135,8 @@ a{
 }
 
 .pg-2{
-    top:-3em;
+    /* background-color: yellow; */
+    padding-top:8em;
     position: relative;
     /* overflow: hidden;
     background-color: red; */
@@ -140,8 +157,8 @@ h2{
     position: relative; 
     font-size:44px;
     position: relative;
-    width:8em;
-    height:3em;
+    width:10em;
+    height:3.8em;
     top:-10em;
     left:8%;
     z-index: 1;
@@ -161,8 +178,9 @@ h2{
 }
 .imp{
     cursor:pointer;
-    color:rgba(0,0,255,0.6);
-    font-weight: bold;
+    font-size: 2.0em;
+    /* color:rgba(0,0,255,0.6); */
+    /* font-weight: bold; */
 }
 
 .hexagon {
@@ -199,4 +217,40 @@ that they form a hexagon */
 }
 .hexagon:after {
     transform: rotate(-60deg);
+}
+
+.pg-3{
+    height:100vh;
+    width:100%;
+    position: relative;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+
+.box-under-pg-3{
+    width:95%;
+    height:15em;
+    margin:2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    display: flex;
+}
+
+
+.boxes{
+    position: relative;
+    width:6em;
+    align-items: center;
+    justify-content: center;
+    margin:4em;
+    
+    height:6em;
+    background: #ebebeb;
 }
