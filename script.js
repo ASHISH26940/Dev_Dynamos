@@ -7,8 +7,19 @@ tl.from(".img,a",{
     stagger:.5
 })
 
-tl.from(".txt1box",{
+tl.from(".txt1box h1",{
     x:-100,
-    duration:2,
-    opacity:0
+    duration:1,
+    opacity:0, 
+})
+tl.from(".txt1box h2",{
+    opacity:0,
+    duration:1
+})
+
+tl.from(".imp ",{
+    x:-100,
+    duration:1,
+    opacity:0,
+    delay:1
 })
