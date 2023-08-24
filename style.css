@@ -42,6 +42,17 @@
     border-left:.005em solid #222 ;
 }
 
+/* btns */
+.btn{
+    position: relative;
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    font-size: 34px;
+    top:2em;
+    margin-left:2em;
+}
+
 
 
 ul{
@@ -114,7 +125,7 @@ a{
     overflow-y: hidden;
     position: relative;
     width:60%;
-    height:8em;
+    height:12em;
     top:13%;
     font-size: 18px;
     left:10%;
@@ -123,25 +134,43 @@ a{
 .card{
     width:15em;
     height:20em;
-    top:-6em;
-    background: #fff;
     position: relative;
-    z-index: 2;
-    margin-bottom:4em;
-    left:70%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
+    z-index: 3;
+    margin-right:5em;
+    right:4em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
 }
 
 .pg-2{
     /* background-color: yellow; */
     padding-top:8em;
     position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
     /* overflow: hidden;
     background-color: red; */
     width:100%;
     height:100vh;
+}
+
+.txtboxs{
+    position:relative;
+    width:100%;
+    height:10em;
+    padding-top:4em;
+    padding-left:8em;
+    font-size: 34px;
+    left:0;
+    /* width:100%;
+    height:10em;
+     */
+}
+
+#imp2{
+    font-size: 44px;
+    font-weight: bold;
+
 }
 
 h2{
@@ -176,12 +205,12 @@ h2{
 ::-webkit-scrollbar{
     width:0;
 }
-.imp{
+/* .imp{
     cursor:pointer;
     font-size: 2.0em;
     /* color:rgba(0,0,255,0.6); */
     /* font-weight: bold; */
-}
+} */
 
 .hexagon {
     top: 30vh;
@@ -254,3 +283,33 @@ that they form a hexagon */
     height:6em;
     background: #ebebeb;
 }
+
+.boxes-1{
+    position: relative;
+    width:10em;
+    align-items: center;
+    justify-content: center;
+    margin:4em;
+    
+    height:20em;
+    background: #ebebeb;
+}
+
+.txtbox-3{
+    overflow: hidden;
+    display: flex;
+    width:100%;
+    height:6em;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Let Us see  Forms->about me ->Conclusion */
+
+/* .forms{
+    position: relative;
+    height:100vh;
+    width:100%;
+
+} */
+
