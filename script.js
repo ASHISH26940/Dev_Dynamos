@@ -42,15 +42,11 @@ tl.from(".img,a", {
     stagger: 0.5
 });
 
-tl.from(".txt1box h1", {
+tl.from(".pg-1 .txt1box h1,.pg-1 .txt1box h2", {
     x: -100,
     duration: 1,
-    opacity: 0
-});
-
-tl.from(".txt1box h2", {
     opacity: 0,
-    duration: 1
+    stagger:.5
 });
 
 // Add ScrollTrigger effect to the span tag
@@ -61,7 +57,7 @@ gsap.from(".pg-2 .txtboxs #imp2,.pg-2 .card", {
     scrollTrigger:{
         trigger:".pg-2 .txtboxs #imp2,.pg-2 .card",
         markers:true,
-        start:"top 60%",
+        start:"top 80%",
         scroller:".main",
         scrub:3
     }
@@ -79,3 +75,15 @@ gsap.from(".pg-2 .txtboxs #imp2,.pg-2 .card", {
 //     }
 // })
 
+tl.from(".pg-3 .box-under-pg-3 .center .boxes",{
+    scale:.5,
+    duration:2,
+    opacity:2,
+    scrollTrigger:{
+        target:".pg-3 .box-under-pg-3 .center .boxes",
+        markers:true,
+        scroller:".main",
+        start:"top top",
+        scrub:2
+    }
+})

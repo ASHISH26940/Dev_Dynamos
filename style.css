@@ -7,9 +7,8 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    overflow-x: hidden;
     font-family: test;
-    
+    overflow:hidden;
 }
 /* overlay */
 .overlay{
@@ -34,7 +33,6 @@
 .pt-1{
     height:6em;
     overflow: hidden;
-
 }
 .pt-2{
     overflow: hidden;
@@ -42,15 +40,23 @@
     border-left:.005em solid #222 ;
 }
 
+/* .txt1box{
+    width:18em;
+    height:12em;
+    position: relative;
+} */
+
 /* btns */
 .btn{
     position: relative;
     background: transparent;
+    padding:.4em;
     border:none;
     cursor:pointer;
     font-size: 34px;
     top:2em;
     margin-left:2em;
+    margin-bottom:2em;
 }
 
 
@@ -125,7 +131,7 @@ a{
     overflow-y: hidden;
     position: relative;
     width:60%;
-    height:12em;
+    height:14em;
     top:13%;
     font-size: 18px;
     left:10%;
@@ -142,30 +148,21 @@ a{
 }
 
 .pg-2{
-    /* background-color: yellow; */
-    padding-top:8em;
-    position: relative;
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    /* overflow: hidden;
-    background-color: red; */
     width:100%;
     height:100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 .txtboxs{
-    position:relative;
-    width:100%;
-    height:10em;
-    padding-top:4em;
-    padding-left:8em;
-    font-size: 34px;
-    left:0;
-    /* width:100%;
-    height:10em;
-     */
+    width:40%;
+
+    height:90%;
+    word-break: break-all;
 }
+
+
 
 #imp2{
     font-size: 44px;
@@ -175,8 +172,6 @@ a{
 
 h2{
     position: relative;
-
-    left:4em;
 }
 
 /* transitions between pages containing navbar and the second*/
@@ -210,7 +205,6 @@ h2{
     font-size: 2.0em;
     /* color:rgba(0,0,255,0.6); */
     /* font-weight: bold; */
-} */
 
 .hexagon {
     top: 30vh;
@@ -306,10 +300,75 @@ that they form a hexagon */
 
 /* Let Us see  Forms->about me ->Conclusion */
 
-/* .forms{
+.forms{
+    width:100%;
+    height:100vh;
+    display: flex;
+    /* background-color: pink; */
+}
+
+.left-side-40{
+    background-color: rgb(128, 128, 128,0.4);
     position: relative;
+    width:40%;
+    height:100%;
+}
+.head-f{
+    width:60em;
+    height:4em;
+    display:flex;
+    justify-content: center;
+
+}
+
+/* Form content */
+.detailed form{
+    height:80%;
+    position: relative;
+    padding-left:2em;
+}
+
+.name{
+    width:34em;
+    height:4em;
+    position: relative;
+}
+
+.mail
+{
+    width:34em;;
+    height:4em;
+    position: relative;
+}
+
+.msg{
+    position: relative;
+    height:6em;
+    width:60%;
+    padding-top:2em;
+}
+
+
+.about-me{
+    position:relative;
     height:100vh;
     width:100%;
-
-} */
-
+    /* background-color: yellow; */
+}
+.descp{
+    width:100%;
+    height:85%;
+}
+.foot{
+    /* background: grey; */
+    position: relative;
+    padding-left:1em;
+    /* width:100%;
+    height:100%; */
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li{
+    cursor: pointer;
+}
