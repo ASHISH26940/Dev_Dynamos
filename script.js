@@ -48,7 +48,6 @@ gsap.from(".pg-1 .txt1box h1,.pg-1 .txt1box h2", {
     opacity: 0,
     stagger:.5,
 });
-gsap
 
 // tl.to(".pg-1")
 
@@ -59,7 +58,7 @@ gsap.from(".pg-2 .txtboxs #imp2,.pg-2 .card", {
     opacity: 0,
     scrollTrigger:{
         trigger:".pg-2 .txtboxs #imp2,.pg-2 .card",
-        markers:true,
+        // markers:true,
         start:"top 60%",
         scroller:".main",
         scrub:3
