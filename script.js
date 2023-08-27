@@ -49,6 +49,87 @@ gsap.from(".pg-1 .txt1box h1,.pg-1 .txt1box h2", {
     stagger:.5,
 });
 
+// alternatives to the above
+// ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
+
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+// ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+const phrases = [
+  'Anonymous Form:'
+]
+
+const el = document.querySelector('.text')
+const fx = new TextScramble(el)
+
+let counter = 0
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 800)
+  })
+  counter = (counter + 1) % phrases.length
+}
+
+next()
+
+
 // tl.to(".pg-1")
 
 // Add ScrollTrigger effect to the span tag
@@ -80,7 +161,7 @@ gsap.from(".pg-2 .txtboxs #imp2,.pg-2 .card", {
 tl.from(".pg-3 .box-under-pg-3 .center .boxes",{
     scale:.5,
     duration:2,
-    opacity:2,
+    opacity:0,
     scrollTrigger:{
         target:".pg-3 .box-under-pg-3 .center .boxes",
         // markers:true,
@@ -89,3 +170,39 @@ tl.from(".pg-3 .box-under-pg-3 .center .boxes",{
         scrub:2
     }
 })
+
+tl.from(".forms-content .head-f h1",{
+  y:-100
+})
+
+
+// Mouse Follower
+// gsap.set(".ball", {xPercent: -50, yPercent: -50});
+
+// const ball = document.querySelector(".ball");
+// const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+// const mouse = { x: pos.x, y: pos.y };
+// const speed = 0.2;
+
+// const xSet = gsap.quickSetter(ball, "x", "px");
+// const ySet = gsap.quickSetter(ball, "y", "px");
+
+// window.addEventListener("mousemove", e => {    
+//   mouse.x = e.x;
+//   mouse.y = e.y;  
+// });
+
+// gsap.ticker.add(() => {
+  
+//   // adjust speed for higher refresh monitors
+//   const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio()); 
+  
+//   pos.x += (mouse.x - pos.x) * dt;
+//   pos.y += (mouse.y - pos.y) * dt;
+//   xSet(pos.x);
+//   ySet(pos.y);
+// });
+
+// // special thanks to Blake Bowen for most of the code.
+
+// // quickTo() version, new in version 3.10.0: https://codepen.io/GreenSock/pen/xxpbORN?editors=0010
