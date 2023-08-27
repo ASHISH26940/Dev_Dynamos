@@ -41,13 +41,16 @@ tl.from(".img,a", {
     opacity: 0,
     stagger: 0.5
 });
-
-tl.from(".pg-1 .txt1box h1,.pg-1 .txt1box h2", {
+gsap.from(".pg-1 .txt1box h1,.pg-1 .txt1box h2", {
     x: -100,
     duration: 1,
+    delay:2,
     opacity: 0,
-    stagger:.5
+    stagger:.5,
 });
+gsap
+
+// tl.to(".pg-1")
 
 // Add ScrollTrigger effect to the span tag
 gsap.from(".pg-2 .txtboxs #imp2,.pg-2 .card", {
@@ -57,7 +60,7 @@ gsap.from(".pg-2 .txtboxs #imp2,.pg-2 .card", {
     scrollTrigger:{
         trigger:".pg-2 .txtboxs #imp2,.pg-2 .card",
         markers:true,
-        start:"top 80%",
+        start:"top 60%",
         scroller:".main",
         scrub:3
     }
@@ -81,7 +84,7 @@ tl.from(".pg-3 .box-under-pg-3 .center .boxes",{
     opacity:2,
     scrollTrigger:{
         target:".pg-3 .box-under-pg-3 .center .boxes",
-        markers:true,
+        // markers:true,
         scroller:".main",
         start:"top top",
         scrub:2
