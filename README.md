@@ -22,3 +22,15 @@
 * In the landing page we can see the landing animation.
 * It is then followed by awwarness towards ragging and how to prevent it.
 * It has been tried to be Follow the UI / UX track for the hackathon
+
+## Challenge we ran into
+
+* Due to sudden illness two of the very important members of our team could not participate until the end.
+* First time collaboration and some miscommunication made delay in the progress.
+* Were very much new to UI / UX design so building some minimalistic design took our time.
+
+
+## Built With
+* HTML,CSS - Frontend part
+* JS - For Animation and Stuff
+
